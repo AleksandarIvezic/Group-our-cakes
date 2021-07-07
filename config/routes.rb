@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # get 'sessions/new'
   # get 'sessions/create'
   # get 'sessions/destroy'
-  root "users#index"
+  root "users#new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   get 'cakes/index'
