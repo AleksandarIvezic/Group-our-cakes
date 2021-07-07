@@ -1,2 +1,4 @@
-<h1>Cakes#index</h1>
-<p>Find me in app/views/cakes/index.html.erb</p>
+<h1>All my Cakes</h1>
+<%@cakes.each do |cake|%>
+<p><%= link_to cake.name, cake_path(id: cake.id) %></p>
+<% end %>

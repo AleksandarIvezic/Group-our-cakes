@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   # get 'sessions/new'
   # get 'sessions/create'
   # get 'sessions/destroy'
-  root "users#new"
+  root "cakes#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  get 'cakes/index'
+  resources :cakes, only: [:new, :create, :show, :destroy]
 
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"
