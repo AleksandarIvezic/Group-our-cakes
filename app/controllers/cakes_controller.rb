@@ -1,5 +1,6 @@
 class CakesController < ApplicationController
   def index
+    redirect_to signup_path if !current_user
     @cakes = Cake.all
   end
   def new 

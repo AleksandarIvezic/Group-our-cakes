@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :cakes, only: [:new, :create, :show, :destroy]
+  resources :groups, only: [:index, :new, :create, :show, :destroy]
 
   get "signup", to: "users#new", as: "signup"
   get "login", to: "sessions#new", as: "login"

@@ -47,5 +47,9 @@
     </div>
 <% end %>
     <%= yield %>
+
+     <% if current_user%>
+     <h3 class = "ms-auto w-25"><%=link_to "Logout", logout_path%></h3>
+     <% end %>
   </body>
 </html>
