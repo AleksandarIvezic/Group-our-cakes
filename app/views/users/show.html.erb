@@ -6,7 +6,7 @@
 
   <ul>
     <li><i class="fas fa-stroopwafel"></i><%=link_to "My cakes", cakes_path, class: ""%></li>
-    <li><i class="fas fa-outdent"></i> <%#link_to "My uncategorized cakes", %></li>
+    <li><i class="fas fa-outdent"></i> <%=link_to "My uncategorized cakes", external_path %></li>
     <li><i class="far fa-object-group"></i><%= link_to "Cake categories", groups_path, class: ""%></li>
     <li><i class="fas fa-user-edit"></i></i><%= link_to 'Edit user', edit_user_path(@user) %></li>
     <li><i class="fas fa-sign-out-alt"></i><%= link_to 'Logout', logout_path %></li>

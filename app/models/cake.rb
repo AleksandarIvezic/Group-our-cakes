@@ -4,4 +4,9 @@ class Cake < ApplicationRecord
 
   validates :name, presence: true 
   validates :amount, presence: true
+
+
+  def uncategorized
+    Cake.where(group_id: nil)
+  end
 end

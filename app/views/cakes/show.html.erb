@@ -3,6 +3,6 @@
 <%=@cake.name%><br>
 <%=@cake.amount%><br>
 <%=@cake.created_at%><br>
-<img src="<%= @group.icon%>" alt="">
+<img src="<%= @group.icon if @group%>" alt=""> 
 
 <%=link_to "Back" , root_path%>
