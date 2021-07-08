@@ -1,7 +1,9 @@
 <h1>Groups list</h1>
     <% @groups.each do |group|%>
         <p><%= link_to group.name, group_path(id: group.id)%></p>
-        <img src="<%=group.icon%>" alt="">
+        <img height="100px" src="<%=group.icon%>" alt="">
+        <p>Created at: <%=group.created_at%> </p>
+        <hr>
     <% end %>
 
 <div class= "d-grid">

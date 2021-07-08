@@ -6,4 +6,8 @@ class Group < ApplicationRecord
   validates :icon, presence: true
 
   mount_uploader :icon, IconUploader
+
+  def self.asc 
+    order("groups.name ASC") 
+  end
 end
