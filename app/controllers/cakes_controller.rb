@@ -18,6 +18,7 @@ class CakesController < ApplicationController
 
   def show 
     @cake = Cake.find(params[:id])
+    @group = Group.find(@cake.group_id)
   end
   def destroy
   end
