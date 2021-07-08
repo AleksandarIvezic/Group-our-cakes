@@ -1,12 +1,9 @@
 class CakesController < ApplicationController
   def index
-    @cakes = Cake.all
-    
+    @cakes = Cake.desc
   end
   def external
-    @cakes = Cake.all
-    @uncategorized_cakes = @cake.uncategorized if @cake
-
+    @uncategorized_cakes = Cake.uncategorized.desc
   end
 
   def new 

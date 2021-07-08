@@ -6,4 +6,8 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   mount_uploader :avatar, AvatarUploader
+
+  def all_cakes
+    cakes.count
+  end
 end

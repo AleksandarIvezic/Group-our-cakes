@@ -1,8 +1,10 @@
-<h1>All my Cakes</h1>
+<h1>All my Cakes = <%= current_user.all_cakes %></h1>
 <%@cakes.each do |cake|%>
-<p><%= link_to cake.name, cake_path(id: cake.id) %></p>
-<p><%= cake.amount%> </p>
-<p><%= cake.created_at%>
+<p>Name: <%= link_to cake.name, cake_path(id: cake.id) %></p>
+<p>Amount: <%= cake.amount%> </p>
+<p>Created at: <%= cake.created_at%></p>
+<img height="50px" src="<%= Group.find(cake.group_id).icon if cake.group_id%>" alt=""> 
+<hr>
 <% end %>
 <div class= "d-grid">
 <%= link_to "Create a new Cake", new_cake_path,  class: "btn btn-success" %>

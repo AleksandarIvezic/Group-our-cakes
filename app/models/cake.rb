@@ -6,7 +6,11 @@ class Cake < ApplicationRecord
   validates :amount, presence: true
 
 
-  def uncategorized
-    Cake.where(group_id: nil)
+  def self.uncategorized
+   where("group_id is ?", nil)
+  end
+
+  def self.desc 
+    order("cakes.created_at DESC") 
   end
 end
