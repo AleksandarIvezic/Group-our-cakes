@@ -4,10 +4,11 @@ class CakesController < ApplicationController
     @cakes = Cake.all
   end
   def new 
-    @cake = Cake.new
+    @group_options = Group.all.map{ |g| [ g.name, g.id]}
+    @cake = current_user.cakes.build
   end
   def create
-    @cake = Cake.new(cake_params)
+    @cake = current_user.cakes.build(cake_params)
     if @cake.save
       redirect_to @cake
     else
@@ -24,7 +25,7 @@ class CakesController < ApplicationController
   private
 
   def cake_params
-    params.require(:cake).permit(:author, :name, :amount)
+    params.require(:cake).permit( :name, :amount, :group_id)
   end
 
 end

@@ -13,10 +13,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.hidden_field author_id: current_user.id %>
-  </div>
-
-  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
@@ -24,6 +20,10 @@
   <div class="field">
     <%= form.label :amount %>
     <%= form.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.select(:group_id, options_for_select(@group_options), :include_blank => true) %>
   </div>
 
   <div class="actions">
