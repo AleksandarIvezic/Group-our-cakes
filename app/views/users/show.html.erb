@@ -2,7 +2,8 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @user.name %>
+  <%= @user.name %><br>
+  <img src="<%= @user.avatar%>" alt="">
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

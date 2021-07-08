@@ -1,4 +1,10 @@
 <h1>All my Cakes</h1>
 <%@cakes.each do |cake|%>
 <p><%= link_to cake.name, cake_path(id: cake.id) %></p>
+<p><%= cake.amount%> </p>
+<p><%= cake.created_at%>
+
 <% end %>
+<div class= "d-grid">
+<%= link_to "Create a new Cake", new_cake_path,  class: "btn btn-success" %>
+</div>
