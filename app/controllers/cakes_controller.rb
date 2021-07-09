@@ -1,6 +1,7 @@
 class CakesController < ApplicationController
   def index
-    @cakes = Cake.desc
+    @cakes = current_user.cakes.desc
+    @group_options = current_user.groups.map{ |g| [ g.name, g.id]}
   end
   def external
     @uncategorized_cakes = Cake.uncategorized.desc
@@ -27,7 +28,26 @@ class CakesController < ApplicationController
   def destroy
   end
 
+  def add_to_group
+    @cake = Cake.find(add_params[:id])
+    @group = Group.find(add_params[:group_id])
+    @cake.groups << @group
+    # @cake.add_to_group
+    redirect_to cakes_path
+  end
+
+  def remove_group
+    @cake = Cake.find(params[:cake])
+    @group = Group.find(params[:group])
+    @cake.groups.delete(@group)
+    redirect_to cakes_path
+  end
+
   private
+
+  def add_params
+    params.permit(:id, :group_id)
+  end
 
   def cake_params
     params.require(:cake).permit( :name, :amount)
