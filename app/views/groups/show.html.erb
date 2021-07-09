@@ -1,7 +1,13 @@
-<h2>Group details</h2>
+<h2><%=@group.name%> details - Total amount = <%=@group.all_cakes %></h2>
 
-<%=@group.name%><br>
+<br>
 <img src="<%=@group.icon%>" alt=""><br>
-<%=@group.created_at%><br>
+<p>Group is created: <%=@group.created_at%></p><br>
+<hr>
+<%@group.cakes.uniq.each do |cake|%>
+<p>Cake name: <%= cake.name%></p>
+<p>Author name: <%= cake.author.name%></p>
+<hr>
+<% end %>
 
 <%=link_to "Back" , groups_path%>

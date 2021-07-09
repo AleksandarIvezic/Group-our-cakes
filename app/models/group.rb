@@ -10,4 +10,8 @@ class Group < ApplicationRecord
   def self.asc 
     order("groups.name ASC") 
   end
+
+  def all_cakes
+    cakes.uniq.count
+  end
 end

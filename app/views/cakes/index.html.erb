@@ -1,4 +1,4 @@
-<h1>All my Cakes = <%= current_user.all_cakes %></h1>
+<h1>All my Cakes - Total amount= <%= current_user.all_cakes %></h1>
 <%@cakes.each do |cake|%>
     <p>Name: <%= link_to cake.name, cake_path(id: cake.id) %></p>
     <p>Amount: <%= cake.amount%> </p>
@@ -14,9 +14,8 @@
                 <%= form.select(:group_id, options_for_select(@group_options), :include_blank => true) %>
             </div>
              <div class="field">
-            <%= form.label :id %>
             <%= form.hidden_field :id, value: cake.id%>
-            </div> %>
+            </div>
 
             <div class="actions">
                 <%= form.submit %>
