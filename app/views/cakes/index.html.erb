@@ -1,10 +1,28 @@
 <h1>All my Cakes = <%= current_user.all_cakes %></h1>
 <%@cakes.each do |cake|%>
-<p>Name: <%= link_to cake.name, cake_path(id: cake.id) %></p>
-<p>Amount: <%= cake.amount%> </p>
-<p>Created at: <%= cake.created_at%></p>
-<img height="50px" src="<%= Group.find(cake.group_id).icon if cake.group_id%>" alt=""> 
-<hr>
+    <p>Name: <%= link_to cake.name, cake_path(id: cake.id) %></p>
+    <p>Amount: <%= cake.amount%> </p>
+    <p>Created at: <%= cake.created_at%></p>
+    <% cake.groups.each do |group|%>
+        <img height="50px" src="<%= group.icon %>" alt=""> 
+        <%= link_to "Remove from this group", remove_group_path(group: group, cake: cake) %>
+    <% end %>
+   
+    <h6>Add to group</h6>
+        <%= form_with url: add_to_group_path do |form| %>
+            <div class="field">
+                <%= form.select(:group_id, options_for_select(@group_options), :include_blank => true) %>
+            </div>
+             <div class="field">
+            <%= form.label :id %>
+            <%= form.hidden_field :id, value: cake.id%>
+            </div> %>
+
+            <div class="actions">
+                <%= form.submit %>
+            </div>
+        <% end %>
+    <hr>
 <% end %>
 <div class= "d-grid">
 <%= link_to "Create a new Cake", new_cake_path,  class: "btn btn-success" %>
