@@ -10,4 +10,13 @@ class User < ApplicationRecord
   def all_cakes
     cakes.count
   end
+
+  def uncategorized_cakes
+    cakes.desc.select{ |cake| cake.groups.empty?}
+  end
+
+  def count_uncategorized_cakes
+    cakes.select{ |cake| cake.groups.empty?}.count
+  end
+
 end

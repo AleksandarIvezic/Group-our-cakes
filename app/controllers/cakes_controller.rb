@@ -4,7 +4,7 @@ class CakesController < ApplicationController
     @group_options = Group.all.map{ |g| [ g.name, g.id]}
   end
   def external
-    @uncategorized_cakes = current_user.cakes.desc.select{ |cake| cake.groups.empty?}
+    @uncategorized_cakes = current_user.uncategorized_cakes
   end
 
   def new 
