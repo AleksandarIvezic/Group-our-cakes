@@ -11,7 +11,8 @@ $background-color: #e0e1e4;
 header {
     background: linear-gradient($main-color, darken($main-color, 10%));
 }
-.all-cakes {
+.all-cakes,
+.all-groups {
     background: $background-color;
     color: $text-color;
 

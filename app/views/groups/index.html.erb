@@ -1,11 +1,35 @@
-<h1>Groups list</h1>
-    <% @groups.each do |group|%>
-        <p><%= link_to group.name, group_path(id: group.id)%></p>
-        <img height="100px" src="<%=group.icon%>" alt="">
-        <p>Created at: <%=group.created_at%> </p>
-        <hr>
-    <% end %>
 
-<div class= "d-grid">
-<%= link_to "Create a new Category", new_group_path,  class: "btn btn-success" %>
-</div>
+<header class="d-flex justify-content-between p-3">
+    
+    <%= link_to user_path(id: current_user.id), class: 'fs-1' do %>
+        <i class="fas fa-bars"></i>
+    <% end %>
+    <h1 > Categories </h1>
+    <a  class= "fs-1"><i class="fas fa-search"></i></a>
+</header>
+
+<section class="all-groups">
+    
+    <div class= "cakes">
+        <%@groups.each do |group|%>
+            <div class="cake bg-light m-2 d-flex">
+                
+                <div class="group-icon p-2">
+                    <img class= "rounded" height="100px" width="100px" src="<%= group.icon%>" alt="Group icon">  
+                </div>
+                <div class="info w-100 p-3 d-flex flex-column justify-content-between">
+                    <div class="base d-flex justify-content-between" >
+                        <p><%= link_to group.name, group_path(id: group.id), class: "fs-4"%></p>
+                    </div>
+                    <div class="date pt-1 border-top border-light-grey"">
+                        <p class="m-0">Created at: <%= group.created_at%></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <div class= " btn-block btn-create text-center">
+    <%= link_to "Create a new Category", new_group_path,  class: "btn btn-create border-light rounded m-2 btn-block text-light" %>
+    </div>
+
+</section>
