@@ -1,7 +1,7 @@
 class CakesController < ApplicationController
   def index
     @cakes = current_user.cakes.desc
-    @group_options = current_user.groups.map{ |g| [ g.name, g.id]}
+    @group_options = Group.all.map{ |g| [ g.name, g.id]}
   end
   def external
     @uncategorized_cakes = current_user.cakes.desc.select{ |cake| cake.groups.empty?}
