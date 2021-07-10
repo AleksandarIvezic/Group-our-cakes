@@ -16,43 +16,7 @@
   </head>
 
   <body>
-    <% if current_user%>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <%=link_to (current_user.name if current_user), user_path(id: current_user.id), class: "navbar-brand"%>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <%=link_to "My cakes", cakes_path, class: "nav-link active"%>
-              <%# <a class="nav-link active" aria-current="page" href="#">My Cakes</a> %>
-            </li>
-            <li class="nav-item">
-              <%#link_to "My uncategorized cakes", %>
-              <a class="nav-link" href="#">My ungrouped Cakes</a>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Cake categories", groups_path, class: "nav-link"%>
-              <%# <a class="nav-link" href="#">My Groups</a> %>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <% else %>
-    <div class = "ms-auto w-25">
-    <%# <%=link_to "Sign up", new_user_path%>
-    <h5 class= "d-inline " >Already have an acount</h5>
-    <%=link_to "Login", new_session_path%>
-    </div>
-<% end %>
+    <p id="notice"><%= notice %></p>
     <%= yield %>
-
-     <% if current_user%>
-     <h3 class = "ms-auto w-25"><%=link_to "Logout", logout_path%></h3>
-     <% end %>
   </body>
 </html>

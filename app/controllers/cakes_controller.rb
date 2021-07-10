@@ -31,7 +31,7 @@ class CakesController < ApplicationController
   def add_to_group
     @cake = Cake.find(add_params[:id])
     @group = Group.find(add_params[:group_id])
-    @cake.groups << @group
+    @cake.groups << @group unless @cake.groups.include?(@group)
     # @cake.add_to_group
     redirect_to cakes_path
   end
