@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
+li {
+    color: #fff;
+    list-style: none;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+}
+
 a:hover {
+    color:#fff;
+    opacity: 0.5;
     text-decoration: none;
 }
