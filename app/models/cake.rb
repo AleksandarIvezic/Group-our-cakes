@@ -5,6 +5,9 @@ class Cake < ApplicationRecord
   validates :name, presence: true 
   validates :amount, presence: true
 
+  def self.asc 
+    order("cakes.created_at ASC") 
+  end
 
   def self.desc 
     order("cakes.created_at DESC") 

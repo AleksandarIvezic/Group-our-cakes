@@ -1,6 +1,8 @@
 class CakesController < ApplicationController
-  def index
-    @cakes = current_user.cakes.desc
+  def index    
+    params[:order]="desc"
+    @cakes = current_user.cakes.desc 
+    @cakes = current_user.cakes.asc if params[:order]=="asc"
   end
   def external
     @uncategorized_cakes = current_user.uncategorized_cakes

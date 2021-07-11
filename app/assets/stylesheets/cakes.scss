@@ -10,6 +10,14 @@ $background-color: #e0e1e4;
 
 header {
     background: linear-gradient($main-color, darken($main-color, 10%));
+    .dot {
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        content: "";
+        margin: 2px auto;
+    }
 }
 .all-cakes,
 .all-groups {
