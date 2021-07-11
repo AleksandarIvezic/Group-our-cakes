@@ -8,7 +8,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   def all_cakes
-    cakes.count
+    cakes.sum("amount")
   end
 
   def uncategorized_cakes

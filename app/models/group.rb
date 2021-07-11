@@ -12,6 +12,6 @@ class Group < ApplicationRecord
   end
 
   def all_cakes
-    cakes.uniq.count
+    cakes.sum("amount")
   end
 end
