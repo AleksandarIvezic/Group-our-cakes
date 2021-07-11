@@ -17,6 +17,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @cakes = @group.cakes
   end
 
   private
