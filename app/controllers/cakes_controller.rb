@@ -1,6 +1,6 @@
 class CakesController < ApplicationController
   def index    
-    params[:order]="desc"
+    params[:order]="desc" unless params[:order]
     @cakes = current_user.cakes.desc 
     @cakes = current_user.cakes.asc if params[:order]=="asc"
   end
