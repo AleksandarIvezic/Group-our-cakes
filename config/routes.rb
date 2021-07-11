@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'home/index'
   get 'groups/index'
   # get 'sessions/new'
   # get 'sessions/create'
   # get 'sessions/destroy'
-  root "users#new"
+  root "home#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :cakes, only: [:index, :new, :create, :show, :destroy] 
