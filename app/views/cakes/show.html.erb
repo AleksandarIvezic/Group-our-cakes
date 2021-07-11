@@ -1,18 +1,12 @@
-<h2>Cake details</h2>
-
-<%=@cake.name%><br>
-<%=@cake.amount%><br>
-<%=@cake.created_at%><br>
-<img src="<%= @group.icon if @group%>" alt=""> 
-
-<%=link_to "Back" , root_path%>
 <header class="d-flex justify-content-between p-3">
     
     <%= link_to user_path(id: current_user.id), class: 'fs-1' do %>
         <i class="fas fa-bars"></i>
     <% end %>
     <h1 > <%=@cake.name%> </h1>
-    <a  class= "fs-1"><i class="fas fa-search"></i></a>
+    <%= link_to cakes_path, class: 'fs-1' do %>
+        <i class="fas fa-arrow-left"></i>
+    <% end %>
 </header>
 
 <section class="all-cakes p-5">
