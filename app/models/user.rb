@@ -16,7 +16,9 @@ class User < ApplicationRecord
   end
 
   def count_uncategorized_cakes
-    cakes.select{ |cake| cake.groups.empty?}.count
+    @sum=0
+    uncategorized_cakes.each{|cake| @sum+=cake.amount}
+    @sum
   end
 
 end
