@@ -9,47 +9,52 @@ $background-color: #e0e1e4;
 
 
 header {
-    background: linear-gradient($main-color, darken($main-color, 10%));
-    .dot {
-        height: 5px;
-        width: 5px;
-        border-radius: 50%;
-        background-color: #fff;
-        content: "";
-        margin: 2px auto;
-    }
+  background: linear-gradient($main-color, darken($main-color, 10%));
+
+  .dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+    margin: 2px auto;
+  }
 }
+
 .all-cakes,
 .all-groups {
-    background: $background-color;
+  background: $background-color;
+  color: $text-color;
+
+  .total,
+  .cake {
+    border-bottom: 2px solid darken($background-color, 10%);
+
+  }
+
+  a {
     color: $text-color;
+  }
 
-    .total,
-    .cake {
-      border-bottom: 2px solid darken($background-color, 10%);
-      
-    }
-    
-    a {
-        color: $text-color;
-    }
-    a:hover {
-        color: $text-color;
-        opacity: 0.5;
-    }
+  a:hover {
+    color: $text-color;
+    opacity: 0.5;
+  }
 
 }
+
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
+
 .btn-create {
-    background-color: $second-color;
+  background-color: $second-color;
 }
 
 a:hover {
-    cursor: pointer;
-    color: #fff;
-    opacity: 0.5;
-    text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
 }

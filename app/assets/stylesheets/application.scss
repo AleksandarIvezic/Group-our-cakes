@@ -14,16 +14,14 @@
  *= require_self
  */
 
+$main-color: #3778c2;
+$second-color: #5fb523;
+$text-color: #434b54;
 
- $main-color: #3778c2;
- $second-color: #5fb523;
- $text-color: #434b54;
-  
- body {
-     margin:0;
-     padding:0;
-    //  height: 100vh;
-    //  background: darken($main-color, 30%);
-     color: #fff;
- }
-
+body {
+  margin: 0;
+  padding: 0;
+  //  height: 100vh;
+  //  background: darken($main-color, 30%);
+  color: #fff;
+}

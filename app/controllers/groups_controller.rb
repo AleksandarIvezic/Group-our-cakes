@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all.asc
   end
+
   def new
     @group = current_user.groups.build
   end
@@ -9,11 +10,11 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      flash[:notice] = "Category created successfully!"
+      flash[:notice] = 'Category created successfully!'
       redirect_to @group
     else
-      flash.now[:alert] = "Please fill required fields!"
-      render "new"
+      flash.now[:alert] = 'Please fill required fields!'
+      render 'new'
     end
   end
 
@@ -31,6 +32,6 @@ class GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:name,:icon)
+    params.require(:group).permit(:name, :icon)
   end
 end
