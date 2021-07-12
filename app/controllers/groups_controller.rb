@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @cakes = @group.cakes
+    @cakes = @group.cakes.includes([:author])
   end
 
   private
