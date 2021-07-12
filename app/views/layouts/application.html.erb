@@ -21,7 +21,9 @@
 
   <body>
       <%if notice%>
-      <p id="notice"><%= notice %></p>
+      <p class= "text-success fs-4 p-2 bg-light m-0" id="notice"><%= notice %></p>
+      <% elsif alert %>
+        <p class= "text-danger fs-4 p-2 bg-light m-0" id="alert"><%= alert %></p>
       <% end %>
       <%= yield %>
    
