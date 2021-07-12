@@ -1,32 +1,18 @@
-
-<%= form_with model: @cake do |form| %>
-  <% if @cake.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cake.errors.count, "error") %> prohibited this @cake from being saved:</h2>
-
-      <ul>
-        <% @cake.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<header class="d-flex justify-content-between p-3">
+    <%= link_to user_path(id: current_user.id), class: 'fs-1' do %>
+        <i class="fas fa-bars"></i>
+    <% end %>
+    <h1 >NEW CAKE</h1>
+    <%= link_to cakes_path, class: 'fs-1' do %>
+        <i class="fas fa-arrow-left"></i>
+    <% end %>
+</header>
+<section class="new_cake user d-flex flex-column align-items-center pt-5">
+    
+    <div class="form d-flex justify-content-center text-start">
+        <%= render 'form' %>
     </div>
-  <% end %>
+    <hr width= "100px">
+    
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
-  </div>
-
-  <div class="field">
-    <%#= form.select(:group_id, options_for_select(@group_options), :include_blank => true) %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</section>
