@@ -14,7 +14,7 @@
     <hr>
     <h6><strong>Name:</strong>  <%=@cake.name%></h6><br>
     <h6><strong>Amount:</strong> <%=@cake.amount%></h6><br>
-    <h6><strong>Created at:</strong> <%=@cake.created_at%></h6><br>
+    <h6><strong>Created at:</strong> <%= @cake.created_at.strftime("%I:%M%p on %d/%m/%Y")%></h6><br>
     <div class="categories d-flex flex-wrap justify-content-start">
         <h6><strong>Category: </strong></h6>
         <div class="group-thumbnails d-flex flex-wrap">

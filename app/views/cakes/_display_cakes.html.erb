@@ -10,7 +10,7 @@
             <p class= "fs-4 fw-bold "><%= cake.amount%> </p>
             </div>
             <div class="date pt-1 border-top border-light-grey"">
-                <p class="m-0">Created at: <%= cake.created_at%></p>
+                <p class="m-0">Created at: <%= cake.created_at.strftime("%I:%M%p on %d/%m/%Y")%></p>
             </div>
         </div>
     </div>
