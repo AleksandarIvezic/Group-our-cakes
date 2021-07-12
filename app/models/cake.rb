@@ -12,4 +12,8 @@ class Cake < ApplicationRecord
   def self.desc 
     order("cakes.created_at DESC") 
   end
+
+  def groups_by_date
+    groups.order("created_at ASC")
+  end
 end

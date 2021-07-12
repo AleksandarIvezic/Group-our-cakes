@@ -24,7 +24,7 @@ class CakesController < ApplicationController
 
   def show 
     @cake = Cake.find(params[:id])
-    @groups = @cake.groups
+    @groups = @cake.groups_by_date
     @group_options = Group.all.map{ |g| [ g.name, g.id]}
   end
   def destroy
