@@ -20,7 +20,9 @@
   </head>
 
   <body>
+      <%if notice%>
       <p id="notice"><%= notice %></p>
+      <% end %>
       <%= yield %>
    
   </body>
