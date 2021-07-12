@@ -7,7 +7,6 @@ $second-color: #5fb523;
 $text-color: #434b54;
 $background-color: #e0e1e4;
 
-
 header {
   background: linear-gradient($main-color, darken($main-color, 10%));
 
@@ -19,6 +18,18 @@ header {
     content: "";
     margin: 2px auto;
   }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
 }
 
 .all-cakes,
@@ -43,18 +54,6 @@ header {
 
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
 .btn-create {
   background-color: $second-color;
-}
-
-a:hover {
-  cursor: pointer;
-  color: #fff;
-  opacity: 0.5;
-  text-decoration: none;
 }
