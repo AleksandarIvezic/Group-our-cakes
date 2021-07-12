@@ -20,6 +20,12 @@ class GroupsController < ApplicationController
     @cakes = @group.cakes.includes([:author])
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    @group.delete
+    redirect_to groups_path
+  end
+
   private
 
   def group_params

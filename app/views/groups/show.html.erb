@@ -37,7 +37,7 @@
             </div>
         <% end %>
     </div>
-    <div class= " btn-block btn-create text-center">
-    <%= link_to "Create a new Category", new_group_path,  class: "btn btn-create border-light rounded m-2 btn-block text-light" %>
+    <div class= " btn-block btn-danger text-center">
+    <%= link_to "Destroy category", group_path, method: :delete, data:{confirm: "Are you sure you want to remove the category?"}, class: "btn btn-danger border-light rounded m-2 btn-block text-light" %>
     </div>
 </section>
