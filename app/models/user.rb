@@ -12,7 +12,7 @@ class User < ApplicationRecord
   end
 
   def uncategorized_cakes
-    cakes.desc.select{ |cake| cake.groups.empty?}
+    cakes.includes([:groups]).desc.select{ |cake| cake.groups.empty?}
   end
 
   def count_uncategorized_cakes
