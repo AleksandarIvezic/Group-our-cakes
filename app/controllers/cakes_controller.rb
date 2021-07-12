@@ -16,8 +16,10 @@ class CakesController < ApplicationController
     @cake = current_user.cakes.build(cake_params)
     
     if @cake.save
+      flash[:notice] = "Item created successfully!"
       redirect_to @cake
     else
+      flash.now[:alert] = "Please fill required fields!"
       render "new"
     end
   end

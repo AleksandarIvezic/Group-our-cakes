@@ -21,11 +21,7 @@
     <%= form.number_field :amount %>
   </div>
 
-  <div class="field">
-    <%#= form.select(:group_id, options_for_select(@group_options), :include_blank => true) %>
-  </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Cake", class: "btn btn-create text-light" %>
   </div>
 <% end %>
