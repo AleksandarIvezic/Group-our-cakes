@@ -5,15 +5,16 @@ class Cake < ApplicationRecord
   validates :name, presence: true 
   validates :amount, presence: true
 
-  def self.asc 
-    order("cakes.created_at ASC") 
-  end
-
-  def self.desc 
-    order("cakes.created_at DESC") 
-  end
-
+  scope :asc, -> {order("cakes.created_at ASC")}
+  scope :desc, -> {order("cakes.created_at DESC")}
+  
   def groups_by_date
     groups.order("created_at ASC")
+  end
+
+  def self.count_uncategorized_cakes(uncategorized_cakes)
+    @sum=0
+    uncategorized_cakes.each{|cake| @sum+=cake.amount}
+    @sum
   end
 end

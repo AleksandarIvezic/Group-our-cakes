@@ -5,11 +5,11 @@ class CakesController < ApplicationController
     @cakes = current_user.cakes.asc if params[:order]=="asc"
   end
   def external
-    @uncategorized_cakes = current_user.uncategorized_cakes
+    @uncategorized_cakes = Cake.joins("LEFT OUTER JOIN cakes_groups ON cakes_groups.cake_id = cakes.id").where("group_id is NULL AND author_id = ?", current_user.id)
+    @count_uncategorized_cakes = Cake.count_uncategorized_cakes(@uncategorized_cakes)
   end
 
   def new 
-    # @group_options = Group.all.map{ |g| [ g.name, g.id]}
     @cake = current_user.cakes.build
   end
   def create
