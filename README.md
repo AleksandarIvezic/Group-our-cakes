@@ -10,7 +10,7 @@
 
 
 
-> In this project I created mobile aplication for grouping cakes in diferent categories. Specification for this project you can find on [Project details](https://www.notion.so/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce#3c21fd71439d481e83b25b9cb8ecb8a8)
+> In this project, I created a mobile application for grouping cakes into different categories. Specification for this project you can find on [Project details](https://www.notion.so/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce#3c21fd71439d481e83b25b9cb8ecb8a8)
 
 ## Built With
 
@@ -24,7 +24,7 @@
 
 ## Getting Started
 
-To get a local copy follow these simple example steps.
+To get a local copy, follow these simple example steps.
 
 ### Prerequisites
 
@@ -39,9 +39,9 @@ Clone the repository with:
 ```
 git clone https://github.com/ShinobiWarior/Group-our-cakes.git
 ```
-or just download [ZIP file](https://github.com/ShinobiWarior/Group-our-cakes/archive/refs/heads/development.zip)
+or download [ZIP file](https://github.com/ShinobiWarior/Group-our-cakes/archive/refs/heads/development.zip)
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
