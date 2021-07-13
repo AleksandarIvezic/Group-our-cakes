@@ -11,7 +11,7 @@ module CakesHelper
     if cake.groups.first
       cake.groups.first.icon
     else
-      "uncategorized/uncategorized.jpeg"
+      'uncategorized/uncategorized.jpeg'
     end
   end
 end

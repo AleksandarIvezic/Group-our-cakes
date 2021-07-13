@@ -42,10 +42,10 @@ class CakesController < ApplicationController
 
   def add_to_group
     @cake = Cake.find(add_params[:id])
-    if add_params[:group_id]==""
-      flash[:alert]= "Please choose category, or create one!"
+    if add_params[:group_id] == ''
+      flash[:alert] = 'Please choose category, or create one!'
     else
-      @group = Group.find(add_params[:group_id]) 
+      @group = Group.find(add_params[:group_id])
       @cake.groups << @group unless @cake.groups.include?(@group)
     end
     redirect_to @cake
