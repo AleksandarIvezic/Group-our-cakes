@@ -41,10 +41,11 @@ div.actions {
   padding: 2px;
   background-color: red;
   display: table;
+  width: 300px;
 }
 
 #error_explanation {
-  width: 450px;
+  width: 250px;
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
@@ -64,6 +65,7 @@ div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+  color: #c00;
 }
 
 label {
