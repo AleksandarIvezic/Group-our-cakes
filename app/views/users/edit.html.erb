@@ -1,0 +1,16 @@
+
+<header class="d-flex justify-content-between p-3">
+    
+    <%= link_to user_path, class: 'fs-1' do %>
+        <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <h1 > EDIT USER </h1>
+    <a  class= "fs-1"><i class="fas fa-search"></i></a>
+</header>
+<section class="registration user d-flex flex-column align-items-center pt-5">
+    
+    <div class="form d-flex justify-content-center text-start">
+        <%= render 'form', user: @user %>
+    </div>
+
+</section>

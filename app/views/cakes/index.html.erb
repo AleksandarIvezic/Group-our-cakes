@@ -1,0 +1,35 @@
+<header class="">
+    <div class="links d-flex justify-content-between p-3">
+        <%= link_to user_path(id: current_user.id), class: 'fs-1' do %>
+        <i class="fas fa-bars"></i>
+    <% end %>
+    <h1 > MY CAKES </h1>
+    <a  class= "fs-1"><i class="fas fa-search"></i></a>
+    </div>
+    <ul class="order d-flex justify-content-end me-3 pb-2 ">
+        <li>
+        <%= link_to "Most recent", cakes_path(order:"desc"), class: "mx-3 d-block" %>
+        <%= desc_dot%>
+        </li>
+        <li>
+        <%= link_to "Most ancient", cakes_path(order:"asc"), class: "mx-3 d-block" %>
+        <%=asc_dot %>
+        </li>
+    </ul>
+    
+</header>
+
+<section class="all-cakes">
+    <div class=" p-3 total d-flex justify-content-between bg-light align-items-center mb-2">
+        <h3>Total amount</h3>
+        <p class= "m-0 p-1 fs-4 fw-bold"><%= current_user.all_cakes %></p>
+    </div>
+    <div class= "cakes">
+        <%= render "display_cakes", cakes: @cakes%>
+    </div>
+    <div class= " btn-block btn-create text-center">
+    <%= link_to "Create a new Cake", new_cake_path,  class: "btn btn-create border-light rounded m-2 btn-block text-light" %>
+    </div>
+
+</section>
+

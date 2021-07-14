@@ -1,0 +1,17 @@
+ 
+ <% cakes.each do |cake|%>
+    <div class="cake bg-light m-2 d-flex">
+        <div class="group-icon p-2">
+            <img class= "rounded" height="100px" width="100px" src="<%= category_img(cake)%>" alt="Uncategorized item">  
+        </div>
+        <div class="info w-100 p-3 d-flex flex-column justify-content-between">
+            <div class="base d-flex justify-content-between" >
+            <p><%= link_to cake.name, cake_path(id: cake.id), class: "fs-4"%></p>
+            <p class= "fs-4 fw-bold "><%= cake.amount%> </p>
+            </div>
+            <div class="date pt-1 border-top border-light-grey"">
+                <p class="m-0">Created at: <%= cake.created_at.strftime("%I:%M%p on %d/%m/%Y")%></p>
+            </div>
+        </div>
+    </div>
+<% end %>
