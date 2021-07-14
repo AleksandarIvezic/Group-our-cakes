@@ -1,3 +1,57 @@
 // Place all the styles related to the Cakes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$main-color: #3778c2;
+$second-color: #5fb523;
+$text-color: #434b54;
+$background-color: #e0e1e4;
+
+header {
+  background: linear-gradient($main-color, darken($main-color, 10%));
+
+  .dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+    margin: 2px auto;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.all-cakes,
+.all-groups {
+  background: $background-color;
+  color: $text-color;
+
+  .total,
+  .cake {
+    border-bottom: 2px solid darken($background-color, 10%);
+  }
+
+  a {
+    color: $text-color;
+  }
+
+  a:hover {
+    color: $text-color;
+    opacity: 0.5;
+  }
+}
+
+.btn-create {
+  background-color: $second-color;
+}

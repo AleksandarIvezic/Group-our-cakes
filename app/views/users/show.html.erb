@@ -1,9 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<section class="user p-5">
+  <div class="user-img mx-auto text-center mb-5">
+    <img width="100px" class="rounded-circle img-thumbnail" src="<%= @user.avatar%>" alt="">
+    <h3 class="text-light"><%= @user.name %></h3>
+  </div>
+  <div class= "user-links ">
+    <ul>
+      <li class= "my-2 fs-6"><i class="fas fa-stroopwafel border p-2 rounded-circle"></i> <%=link_to "My cakes", cakes_path, class: "ms-2 pb-2 "%></li>
+      <hr class= "ms-5 bg-light">
+      <li class= "my-2 fs-6"><i class="fas fa-outdent border p-2 rounded-circle"></i> <%=link_to "My uncategorized cakes", external_path, class: "ms-2 pb-2 "  %></li>
+      <hr class= "ms-5 bg-light">
+      <li class= "my-2 fs-6"><i class="far fa-object-group border p-2 rounded-circle"></i> <%= link_to "Cake categories", groups_path, class: "ms-2 pb-2 "%></li>
+      <hr class= "ms-5 bg-light">
+      <li class= "my-2 fs-6"><i class="fas fa-user-edit border p-2 rounded-circle"></i></i> <%= link_to 'Edit user', edit_user_path(@user), class: "ms-2 pb-2 " %></li>
+      <hr class= "ms-5 bg-light">
+      <li class= "my-2 fs-6"><i class="fas fa-users border p-2 rounded-circle"></i></i> <%= link_to 'See all users', users_path, class: "ms-2 pb-2 " %></li>
+      <hr class= "ms-5 bg-light">
+      <li class= "my-2 fs-6"><i class="fas fa-sign-out-alt border p-2 rounded-circle"></i> <%= link_to 'Logout', logout_path, class: "ms-2 pb-2 " %></li>
+    </ul>
+  </div>
+</section>

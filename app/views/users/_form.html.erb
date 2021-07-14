@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar %>
+  </div>
+
+  <div class="field">
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
@@ -26,7 +31,7 @@
     <%= form.password_field :password_confirmation %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions ">
+    <%= form.submit  "Confirm", class: " btn btn-info" %>
   </div>
 <% end %>

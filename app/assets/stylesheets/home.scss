@@ -1,0 +1,14 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+$main-color: #3778c2;
+$second-color: #5fb523;
+$text-color: #434b54;
+
+.heading {
+  height: 75vh;
+  color: $text-color;
+  font-family: 'Courgette', cursive;
+}

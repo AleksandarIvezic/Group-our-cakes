@@ -1,5 +1,22 @@
-<h1>New User</h1>
+<header class="d-flex justify-content-between p-3">
+    
+    <%= link_to root_path, class: 'fs-1' do %>
+        <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <h1 > REGISTER </h1>
+    <a  class= "fs-1"><i class="fas fa-search"></i></a>
+</header>
+<section class="registration user d-flex flex-column align-items-center pt-5">
+    
+    <div class="form d-flex justify-content-center text-start">
+        <%= render 'form', user: @user %>
+    </div>
+    <hr width= "100px">
+    <div class = "login d-flex flex-column align-items-start justify-content-center">
+        <h6  >Already have an acount?</h6>
+        <p><%=link_to "Login", new_session_path, class: "text-light fw-bold "%></p>
+    </div>
 
-<%= render 'form', user: @user %>
+</section>
 
-<%= link_to 'Back', users_path %>
+
