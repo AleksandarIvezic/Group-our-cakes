@@ -7,9 +7,6 @@
 ![screenshot](screen_shoots/All-cakes.png)
 ![screenshot](screen_shoots/All-groups.png)
 
-
-
-
 > In this project, I created a mobile application for grouping cakes into different categories. Specification for this project you can find on [Project details](https://www.notion.so/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce#3c21fd71439d481e83b25b9cb8ecb8a8)
 
 ## Built With
