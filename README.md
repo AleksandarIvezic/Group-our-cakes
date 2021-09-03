@@ -86,4 +86,4 @@ Feel free to check the [issues page](https://github.com/ShinobiWarior/Group-our-
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-This Project was inspired by Microverse and [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) Design idea from [Gregoire Vella](https://www.behance.net/gregoirevella).
+- This project was inspired by [Microverse](https://www.microverse.org/?grsf=w9rx3c) and [Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) Design idea from [Gregoire Vella](https://www.behance.net/gregoirevella).
