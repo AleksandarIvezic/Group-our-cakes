@@ -1,4 +1,3 @@
-
 # Capstone project: Group our cakes app
 ![screenshot](screen_shoots/home.png)
 ![screenshot](screen_shoots/register.png)
@@ -78,7 +77,7 @@ Open `http://localhost:3000/` in your browser.
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/ShinobiWarior/Group-our-cakes/issues/).
 
